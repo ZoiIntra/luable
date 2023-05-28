@@ -136,10 +136,6 @@ if not isfolder("Revenant") then
 	Method = "GET"
 	})
 	writefile("Revenant/Circle.png", Circle.Body)
-	library:Notification({
-        Text = "Downloaded Toggle Asset.",
-        Duration = 3
-    })
 end
 
 function library:Window(Info)
