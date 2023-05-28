@@ -1,6 +1,6 @@
 local library = {}
 library.Flags = {}
-library.DefaultColor = Color3.fromRGB(56, 207, 154)
+library.DefaultColor = Color3.fromRGB(0, 255, 145)
 
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
