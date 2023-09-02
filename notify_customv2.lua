@@ -48,7 +48,7 @@ function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
     StrokeFrame.Name = "StrokeFrame"
     StrokeFrame.Parent = Notification
     StrokeFrame.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    StrokeFrame.Color = Color
+    StrokeFrame.Color = Color3.fromRGB(255, 255, 255)
     StrokeFrame.LineJoinMode = Enum.LineJoinMode.Round
     StrokeFrame.Thickness = 3
     StrokeFrame.Transparency = 0
