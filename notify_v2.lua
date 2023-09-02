@@ -1,7 +1,5 @@
 local NotificationLibrary = {}
-
 local LuableNotifyV2GUI = Instance.new("ScreenGui"); LuableNotifyV2GUI.Name = "LuableNotifyV2"; LuableNotifyV2GUI.Parent = game.CoreGui; LuableNotifyV2GUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
     local Notification = Instance.new("Frame")
 	local Line = Instance.new("Frame")
@@ -9,7 +7,8 @@ function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
 	local UICorner = Instance.new("UICorner")
 	local Title = Instance.new("TextLabel")
 	local Description = Instance.new("TextLabel")
-
+	local UICorner = Instance.new("UICorner")
+	local UICorner2 = Instance.new("UICorner")
 	Notification.Name = "Notification"
 	Notification.Parent = LuableNotifyV2GUI
 	Notification.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -17,14 +16,16 @@ function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
 	Notification.BorderSizePixel = 0
 	Notification.Position = UDim2.new(1, 5, 0, 75)
 	Notification.Size = UDim2.new(0, 450, 0, 60)
-
+	UICorner.Name = "UICorner"
+	UICorner.Parent = Notification
 	Line.Name = "Line"
 	Line.Parent = Notification
 	Line.BackgroundColor3 = Color
 	Line.BorderSizePixel = 0
 	Line.Position = UDim2.new(0, 0, 0.938461304, 0)
 	Line.Size = UDim2.new(0, 0, 0, 4)
-
+	UICorner2.Name = "UICorner2"
+	UICorner2.Parent = Line
 	Warning.Name = "Warning"
 	Warning.Parent = Notification
 	Warning.BackgroundTransparency = 1.000
@@ -32,10 +33,8 @@ function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
 	Warning.Size = UDim2.new(0, 44, 0, 49)
 	Warning.Image = "rbxassetid://"..tostring(ImageSet)
 	Warning.ScaleType = Enum.ScaleType.Fit
-
 	UICorner.CornerRadius = UDim.new(0, 20)
 	UICorner.Parent = Warning
-
 	Title.Name = "Title"
 	Title.Parent = Notification
 	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -47,7 +46,6 @@ function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
 	Title.TextSize = 12.000
 	Title.TextStrokeTransparency = 0.500
 	Title.TextXAlignment = Enum.TextXAlignment.Left
-
 	Description.Name = "Description"
 	Description.Parent = Notification
 	Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -67,5 +65,4 @@ function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
 	    wait(0.35)
 	    Notification:Destroy()
 end
-
 return NotificationLibrary
