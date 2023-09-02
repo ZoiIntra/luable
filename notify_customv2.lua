@@ -7,7 +7,7 @@ function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
 	local UICorner = Instance.new("UICorner")
 	local Title = Instance.new("TextLabel")
 	local Description = Instance.new("TextLabel")
-	local UICorner = Instance.new("UICorner")
+	local UICorner1 = Instance.new("UICorner")
 	local UICorner2 = Instance.new("UICorner")
 	Notification.Name = "Notification"
 	Notification.Parent = LuableNotifyV2GUI
@@ -15,8 +15,8 @@ function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
 	Notification.BorderSizePixel = 0
 	Notification.Position = UDim2.new(1, 5, 0, 75)
 	Notification.Size = UDim2.new(0, 450, 0, 60)
-	UICorner.Name = "UICorner"
-	UICorner.Parent = Notification
+	UICorner1.Name = "UICorner1"
+	UICorner1.Parent = Notification
 	Line.Name = "Line"
 	Line.Parent = Notification
 	Line.BackgroundColor3 = Color
@@ -50,7 +50,7 @@ function NotificationLibrary:Notify(TitleText, Desc, ImageSet, Color, Delay)
     StrokeFrame.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     StrokeFrame.Color = Color
     StrokeFrame.LineJoinMode = Enum.LineJoinMode.Round
-    StrokeFrame.Thickness = 1
+    StrokeFrame.Thickness = 3
     StrokeFrame.Transparency = 0
     StrokeFrame.Enabled = true
     StrokeFrame.Archivable = true
